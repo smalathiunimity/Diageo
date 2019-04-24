@@ -164,7 +164,7 @@ class AutocompleteDeluxeWidget extends WidgetBase implements ContainerFactoryPlu
     $not_found_message = isset($settings['not_found_message']) ? $this->t($settings['not_found_message']) : $this->t("The term '@term' will be added.");
     if (!$new_terms) {
       if ($allow_message) {
-        $not_found_message = isset($settings['not_found_message']) ? $this->t($settings['not_found_message']) : $this->t("Cannot add '@term' because 'Allow new terms' is disabled on the widget settings.");
+        $not_found_message = $this->t("Cannot add '@term' because 'Allow new terms' is disabled on the widget settings.");
       }
       else {
         $not_found_message = "";
